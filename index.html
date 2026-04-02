@@ -881,7 +881,7 @@
 <nav class="month-nav">
   <div class="month-tab" onclick="switchMonth('jan')" id="tab-jan">Janvier 2026</div>
   <div class="month-tab active" onclick="switchMonth('feb')" id="tab-feb">Février 2026</div>
-  <div class="month-tab disabled" id="tab-mar">Mars 2026 <span class="coming-soon">À venir</span></div>
+  <div class="month-tab" onclick="switchMonth('mar')" id="tab-mar">Mars 2026</div>
 </nav>
 
 <!-- CONTENT -->
@@ -1510,34 +1510,461 @@
         </div>
       </div>
 
-      <div class="split-grid" style="margin-top:0">
+    </div>
+
+  </div><!-- /panel-feb -->
+
+
+  <!-- ─────────────────────────── MARCH ─────────────────────────── -->
+  <div class="month-panel" id="panel-mar">
+
+    <!-- Sub tabs -->
+    <div class="sub-nav">
+      <div class="sub-tab active" onclick="switchSub('mar','global')">Vue Globale</div>
+      <div class="sub-tab" onclick="switchSub('mar','brand')">Brand</div>
+      <div class="sub-tab" onclick="switchSub('mar','nonbrand')">Non-Brand</div>
+      <div class="sub-tab" onclick="switchSub('mar','campagnes')">Campagnes</div>
+      <div class="sub-tab" onclick="switchSub('mar','produits')">Top Produits</div>
+      <div class="sub-tab" onclick="switchSub('mar','actions')">Actions & Reco</div>
+      <div class="sub-tab" onclick="switchSub('mar','conclusion')">Conclusion</div>
+    </div>
+
+    <!-- Mars > Global -->
+    <div class="sub-panel active" id="mar-global">
+      <div class="section-header">
+        <div class="section-label">Mars 2026 — Analyse mensuelle</div>
+        <div class="section-title">Vue d'ensemble du compte</div>
+        <div class="section-subtitle">Mars repart sur une base saine : dépenses en baisse, rentabilité globale en hausse et Non-Brand toujours au-dessus de l'objectif.</div>
+      </div>
+
+      <div class="pacing-highlight">
+        <div class="pacing-item">
+          <div class="pacing-label">Chiffre d'affaires</div>
+          <div class="pacing-val">17 515,64 €</div>
+          <div class="pacing-sub">Conv. Value totale</div>
+        </div>
+        <div class="pacing-item">
+          <div class="pacing-label">ROAS Global</div>
+          <div class="pacing-val">9,67</div>
+          <div class="pacing-sub">Cible Brand 20 / NB 2,5</div>
+        </div>
+        <div class="pacing-item">
+          <div class="pacing-label">Conversions</div>
+          <div class="pacing-val">269,47</div>
+          <div class="pacing-sub">CPA moyen 6,72 €</div>
+        </div>
+        <div class="pacing-item">
+          <div class="pacing-label">Coût total</div>
+          <div class="pacing-val">1 811,38 €</div>
+          <div class="pacing-sub">vs février : -17,92%</div>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Conv. Brand</div>
+          <div class="kpi-value">166,44</div>
+          <div class="kpi-delta up">+8,04% vs M-1</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Conv. Non-Brand</div>
+          <div class="kpi-value">103,04</div>
+          <div class="kpi-delta down">-10,60% vs M-1</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">CPA Moyen</div>
+          <div class="kpi-value">6,72<span class="kpi-unit">€</span></div>
+          <div class="kpi-delta up">-18,19% vs M-1</div>
+        </div>
+        <div class="kpi-card accent">
+          <div class="kpi-label">ROAS Global</div>
+          <div class="kpi-value">9,67</div>
+          <div class="kpi-delta up">+20,07% vs M-1</div>
+        </div>
+      </div>
+
+      <div class="split-grid">
         <div class="card">
-          <div class="card-title">Points de vigilance</div>
-          <ul class="bullet-list">
-            <li class="warn">Resistim — ROAS 0,46 : principal drain de rentabilité Non-Brand</li>
-            <li class="warn">Gonaxine 300 (30) — ROAS 0,48 : à exclure ou ajuster fortement</li>
-            <li class="warn">PMax : coût en hausse (+130% sur S9), efficacité à surveiller de près</li>
-            <li class="warn">Shopping : rentabilité encore fragile malgré progression des volumes</li>
-          </ul>
+          <div class="card-title">Campagnes Branding</div>
+          <div class="kpi-value" style="font-family:'Plus Jakarta Sans', system-ui, sans-serif;font-size:28px;font-weight:800;color:var(--navy)">11 615,91 €</div>
+          <div style="font-size:12px;color:var(--gray-500);margin-bottom:12px">Conv. Value Brand</div>
+          <div class="metrics-list">
+            <div class="metric-row">
+              <span class="metric-name">ROAS Brand</span>
+              <span class="metric-val">16,95</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-name">Évolution Conv. Value</span>
+              <span class="metric-val" style="color:var(--positive)">+18,13%</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-name">CPA Brand</span>
+              <span class="metric-val">4,12 €</span>
+            </div>
+          </div>
+          <div class="insight-box warn" style="margin-top:14px;font-size:12px">Le Brand génère plus de valeur qu'en février, mais avec une hausse très forte des coûts qui comprime le ROAS sous la cible de 20.</div>
         </div>
         <div class="card">
-          <div class="card-title navy">Moteurs de croissance</div>
+          <div class="card-title navy">Campagnes Non-Branding</div>
+          <div class="kpi-value" style="font-family:'Plus Jakarta Sans', system-ui, sans-serif;font-size:28px;font-weight:800;color:var(--navy)">5 899,74 €</div>
+          <div style="font-size:12px;color:var(--gray-500);margin-bottom:12px">Conv. Value Non-Brand</div>
+          <div class="metrics-list">
+            <div class="metric-row">
+              <span class="metric-name">ROAS Non-Brand</span>
+              <span class="metric-val">5,24</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-name">Évolution ROAS</span>
+              <span class="metric-val" style="color:var(--positive)">+28,28%</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-name">CPA Non-Brand</span>
+              <span class="metric-val">10,93 €</span>
+            </div>
+          </div>
+          <div class="insight-box teal" style="margin-top:14px;font-size:12px">Le Non-Brand reste au-dessus de la cible de 2,5 avec des coûts en forte baisse et un CPA nettement mieux maîtrisé.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mars > Brand -->
+    <div class="sub-panel" id="mar-brand">
+      <div class="section-header">
+        <div class="section-label">Mars 2026 — Brand</div>
+        <div class="section-title">Performance Brand</div>
+        <div class="section-subtitle">Le Brand reste très rentable en valeur, mais le niveau d'investissement augmente beaucoup plus vite que l'efficacité.</div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card accent">
+          <div class="kpi-label">Conv. Value</div>
+          <div class="kpi-value">11 615,91<span class="kpi-unit">€</span></div>
+          <div class="kpi-delta up">+18,13% vs M-1</div>
+        </div>
+        <div class="kpi-card accent">
+          <div class="kpi-label">ROAS Brand</div>
+          <div class="kpi-value">16,95</div>
+          <div class="kpi-delta down">−54,68% vs M-1</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Conversions</div>
+          <div class="kpi-value">166,44</div>
+          <div class="kpi-delta up">+8,04% vs M-1</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">CPA</div>
+          <div class="kpi-value">4,12<span class="kpi-unit">€</span></div>
+          <div class="kpi-delta down">+141,23% vs M-1</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Coût Brand</div>
+          <div class="kpi-value">685,23<span class="kpi-unit">€</span></div>
+          <div class="kpi-delta down">+160,63% vs M-1</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Analyse Brand</div>
+        <ul class="bullet-list">
+          <li>La valeur générée par le Brand progresse à 11 615,91 € malgré un ROAS en repli à 16,95</li>
+          <li>Le niveau de dépense augmente, ce qui pèse mécaniquement sur la rentabilité</li>
+          <li>Le CPA remonte à 4,12 € mais reste faible en absolu sur un levier Brand</li>
+          <li>La campagne Search Brand `Branding - TIC` reste le pilier du mois avec un ROAS très élevé</li>
+          <li class="navy">Priorité : protéger la demande de marque tout en recontrôlant l'intensité budgétaire</li>
+          <li class="warn">Point de vigilance : le Brand passe sous la cible ROAS 20 sur le mois</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mars > Non-Brand -->
+    <div class="sub-panel" id="mar-nonbrand">
+      <div class="section-header">
+        <div class="section-label">Mars 2026 — Non-Brand</div>
+        <div class="section-title">Performance Non-Brand</div>
+        <div class="section-subtitle">Le Non-Brand reste solide : moins de dépenses, un meilleur ROAS et une vraie hiérarchie entre les leviers.</div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">Conv. Value</div>
+          <div class="kpi-value">5 899,74<span class="kpi-unit">€</span></div>
+          <div class="kpi-delta down">−25,69% vs M-1</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">ROAS Non-Brand</div>
+          <div class="kpi-value">5,24</div>
+          <div class="kpi-delta up">+28,28% vs M-1</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Conversions</div>
+          <div class="kpi-value">103,04</div>
+          <div class="kpi-delta down">−10,60% vs M-1</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">CPA</div>
+          <div class="kpi-value">10,93<span class="kpi-unit">€</span></div>
+          <div class="kpi-delta up">−35,90% vs M-1</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Coût Non-Brand</div>
+          <div class="kpi-value">1 126,14<span class="kpi-unit">€</span></div>
+          <div class="kpi-delta up">−42,07% vs M-1</div>
+        </div>
+      </div>
+
+      <div class="insight-box teal">
+        ✅ Avec un ROAS de 5,24, le Non-Brand reste largement au-dessus de la cible de 2,5 malgré une baisse de la valeur générée en volume.
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="card">
+        <div class="card-title">Facteurs d'amélioration</div>
+        <ul class="bullet-list">
+          <li>La baisse des dépenses (-42,07%) améliore mécaniquement la rentabilité globale du Non-Brand</li>
+          <li>`Search DSA - CPA Cible` ressort comme meilleur levier du mois avec un ROAS de 17,60x</li>
+          <li>`Shopping Produits` reste positif mais beaucoup plus faible que le DSA</li>
+          <li>`PMax Feed Only` reste en dessous de la cible et demande encore un cadrage créatif / catalogue</li>
+          <li class="warn">Levier naturellement plus hétérogène : arbitrage fin indispensable entre DSA, Shopping et PMax</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mars > Campagnes -->
+    <div class="sub-panel" id="mar-campagnes">
+      <div class="section-header">
+        <div class="section-label">Mars 2026 — Par type de campagne</div>
+        <div class="section-title">Performances par levier</div>
+      </div>
+
+      <div class="campaign-grid">
+        <div class="campaign-card search">
+          <div class="campaign-type">Search Brand</div>
+          <div class="campaign-roas">118,11</div>
+          <div class="campaign-roas-label">ROAS</div>
+          <div class="metrics-list">
+            <div class="metric-row">
+              <span class="metric-name">Conversions</span>
+              <span class="metric-val">124,09</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-name">CPA</span>
+              <span class="metric-val">0,62 €</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-name">Coût</span>
+              <span class="metric-val">77,26 €</span>
+            </div>
+          </div>
+          <div class="insight-box" style="margin-top:14px;font-size:12px">Levier star du mois. `Branding - TIC` concentre l'essentiel de l'efficacité Brand.</div>
+        </div>
+
+        <div class="campaign-card shopping">
+          <div class="campaign-type">DSA Non-Brand</div>
+          <div class="campaign-roas">17,60</div>
+          <div class="campaign-roas-label">ROAS</div>
+          <div class="metrics-list">
+            <div class="metric-row">
+              <span class="metric-name">Conversions</span>
+              <span class="metric-val">67,13</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-name">CPA</span>
+              <span class="metric-val">3,33 €</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-name">Coût</span>
+              <span class="metric-val">223,72 €</span>
+            </div>
+          </div>
+          <div class="insight-box teal" style="margin-top:14px;font-size:12px">Meilleur levier Non-Brand du mois, largement au-dessus de la cible de rentabilité.</div>
+        </div>
+
+        <div class="campaign-card pmax">
+          <div class="campaign-type">PMax Feed Only</div>
+          <div class="campaign-roas">1,95</div>
+          <div class="campaign-roas-label">ROAS</div>
+          <div class="metrics-list">
+            <div class="metric-row">
+              <span class="metric-name">Clics</span>
+              <span class="metric-val">1 643</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-name">CPA</span>
+              <span class="metric-val">12,06 €</span>
+            </div>
+            <div class="metric-row">
+              <span class="metric-name">Coût</span>
+              <span class="metric-val">743,85 €</span>
+            </div>
+          </div>
+          <div class="insight-box warn" style="margin-top:14px;font-size:12px">Volume important, mais ROAS encore sous la cible. Le levier a besoin d'un recadrage pour gagner en efficacité.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mars > Produits -->
+    <div class="sub-panel" id="mar-produits">
+      <div class="section-header">
+        <div class="section-label">Mars 2026 — Non-Brand</div>
+        <div class="section-title">Top Leviers</div>
+        <div class="section-subtitle">Le rapport de mars met surtout en avant les meilleurs leviers Non-Brand du mois plutôt qu'un top produits détaillé.</div>
+      </div>
+
+      <div class="product-section">
+        <div class="product-section-title">✅ Top 3 Non-Brand (ROAS)</div>
+        <div class="product-grid">
+          <div class="product-item">
+            <span class="product-name">Search DSA - CPA Cible</span>
+            <span class="product-roas-badge good">ROAS 17,60</span>
+          </div>
+          <div class="product-item">
+            <span class="product-name">Shopping Test Produit</span>
+            <span class="product-roas-badge medium">ROAS 2,05</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-box warn">
+        🎯 <strong>Lecture du mois :</strong> le DSA est le moteur Non-Brand à renforcer, tandis que PMax reste sous la cible et doit être mieux cadré avant d'être davantage scalé.
+      </div>
+    </div>
+
+    <!-- Mars > Actions & Reco -->
+    <div class="sub-panel" id="mar-actions">
+      <div class="section-header">
+        <div class="section-label">Mars 2026</div>
+        <div class="section-title">Actions & Recommandations</div>
+      </div>
+
+      <div class="split-grid">
+        <div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:16px">✅ Actions mises en place</div>
+          <div class="action-list">
+            <div class="action-item">
+              <div class="action-icon done">🚫</div>
+              <div class="action-text">
+                <strong>Arbitrage budgétaire visible dans les résultats</strong>
+                Le mois montre une baisse nette des dépenses totales et un recentrage sur les leviers les plus rentables
+              </div>
+            </div>
+            <div class="action-item">
+              <div class="action-icon done">⚖️</div>
+              <div class="action-text">
+                <strong>DSA Non-Brand performant</strong>
+                `Search DSA - CPA Cible` ressort comme levier principal côté acquisition rentable
+              </div>
+            </div>
+            <div class="action-item">
+              <div class="action-icon done">🏗️</div>
+              <div class="action-text">
+                <strong>Brand toujours capté efficacement</strong>
+                La campagne Search Brand reste extrêmement efficiente malgré la pression sur le ROAS global Brand
+              </div>
+            </div>
+            <div class="action-item">
+              <div class="action-icon done">🎯</div>
+              <div class="action-text">
+                <strong>Resserrement du périmètre DSA</strong>
+                Deux cibles d'annonces dynamiques ont été mises en veille dans la campagne `O - Search DSA - CPA Cible`, groupe `DSA Produits`, afin de mieux contrôler les URL et collections diffusées
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--navy);margin-bottom:16px">→ Actions à mener</div>
+          <div class="action-list">
+            <div class="action-item">
+              <div class="action-icon todo">🔀</div>
+              <div class="action-text">
+                <strong>Réduire la pression coût sur le Brand</strong>
+                Revenir vers un pilotage plus strict pour remonter le ROAS Brand vers la cible de 20
+              </div>
+            </div>
+            <div class="action-item">
+              <div class="action-icon todo">📊</div>
+              <div class="action-text">
+                <strong>Accélérer sur le DSA gagnant</strong>
+                Capitaliser sur `Search DSA - CPA Cible`, meilleur levier Non-Brand du mois
+              </div>
+            </div>
+            <div class="action-item">
+              <div class="action-icon todo">🖼️</div>
+              <div class="action-text">
+                <strong>Revoir le cadrage PMax</strong>
+                Travailler le catalogue, les signaux et les assets pour sortir d'un ROAS sous la cible
+              </div>
+            </div>
+            <div class="action-item">
+              <div class="action-icon todo">💰</div>
+              <div class="action-text">
+                <strong>Optimisation à la marge</strong>
+                Utiliser la marge par produit pour les optimisations des campagnes
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--navy);margin-bottom:16px">📋 Recommandations stratégiques</div>
+      <div class="reco-grid">
+        <div class="reco-card">
+          <div class="reco-header">
+            <div class="reco-icon">🎨</div>
+            <div class="reco-title">Priorité pilotage Mars</div>
+          </div>
           <ul class="bullet-list">
-            <li>Search Brand : ROAS 37 — socle intouchable à protéger</li>
-            <li>Evacrine, Argilea, VCYT Flash : ROAS élevés — budgets à scaler</li>
-            <li>Non-Brand en progression — continuer le pilotage fin</li>
-            <li>PMax avec bons assets : potentiel d'acquisition significatif</li>
+            <li>Stabiliser le ROAS Brand en limitant la dérive de coût</li>
+            <li>Conserver DSA comme levier d'acquisition rentable</li>
+            <li>Rendre PMax plus sélectif avant de réaugmenter la pression</li>
+          </ul>
+        </div>
+        <div class="reco-card">
+          <div class="reco-header">
+            <div class="reco-icon">📐</div>
+            <div class="reco-title">Indicateurs à suivre</div>
+          </div>
+          <ul class="bullet-list">
+            <li>ROAS Brand vs cible 20</li>
+            <li>ROAS Non-Brand vs cible 2,5</li>
+            <li>Écart de performance entre DSA, Shopping et PMax</li>
           </ul>
         </div>
       </div>
     </div>
 
-  </div><!-- /panel-feb -->
+    <!-- Mars > Conclusion -->
+    <div class="sub-panel" id="mar-conclusion">
+      <div class="section-header">
+        <div class="section-label">Mars 2026 — Bilan mensuel</div>
+        <div class="section-title">Conclusion</div>
+      </div>
+
+      <div class="conclusion-card">
+        <h2>Mars 2026 — Bilan</h2>
+        <div class="conclusion-checks">
+          <div class="check-item"><div class="check-icon">✓</div>Compte rentable (ROAS 9,67)</div>
+          <div class="check-item"><div class="check-icon">✓</div>Non-Brand au-dessus de la cible (ROAS 5,24)</div>
+          <div class="check-item"><div class="check-icon">✓</div>Brand créateur de valeur mais ROAS sous la cible</div>
+          <div class="check-item"><div class="check-icon">✓</div>DSA confirmé comme meilleur levier Non-Brand</div>
+        </div>
+        <div class="priority-box">
+          <strong>🎯 Priorité avril 2026</strong>
+          Préserver la rentabilité globale en rééquilibrant le Brand et en concentrant l'effort d'acquisition sur les sous-leviers Non-Brand déjà prouvés.
+        </div>
+      </div>
+
+    </div>
+
+  </div><!-- /panel-mar -->
 
 </main>
 
 <footer class="footer">
-  Motima × ORION — Google Ads Insights 2026 &nbsp;·&nbsp; Données au 28 février 2026
+  Motima × ORION — Google Ads Insights 2026 &nbsp;·&nbsp; Attribution et données au 2 Avril 2026
 </footer>
 
 <script>
@@ -1563,7 +1990,8 @@
 
     const map = {
       jan: ['global','brand','nonbrand','conclusion'],
-      feb: ['global','brand','nonbrand','campagnes','produits','actions','conclusion']
+      feb: ['global','brand','nonbrand','campagnes','produits','actions','conclusion'],
+      mar: ['global','brand','nonbrand','campagnes','produits','actions','conclusion']
     };
 
     const idx = map[month].indexOf(sub);
